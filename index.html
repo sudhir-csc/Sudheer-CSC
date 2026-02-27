@@ -1,99 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<title>Sudheer Sharma CSC Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sudheer Sharma | CSC Online Services</title>
-
 <style>
+
 body{
 margin:0;
-font-family:Arial, sans-serif;
-background:#f4f6f9;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(to right,#eef2ff,#f8fbff);
 }
 
 header{
-background:linear-gradient(45deg,#0d47a1,#1565c0);
+background: linear-gradient(135deg,#0f3c91,#1e4fa3);
 color:white;
 text-align:center;
-padding:25px;
+padding:30px 20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+header img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid white;
+box-shadow:0 6px 18px rgba(0,0,0,0.4);
+margin-top:15px;
 }
 
 nav{
-background:#0d47a1;
-padding:10px;
+background:#0d2f6e;
+padding:12px;
 text-align:center;
 }
 
 nav a{
 color:white;
-text-decoration:none;
 margin:15px;
+text-decoration:none;
 font-weight:bold;
+font-size:15px;
 }
 
-section{
-padding:30px;
-margin:20px;
+.section{
+padding:25px;
+max-width:900px;
+margin:auto;
+}
+
+.card{
 background:white;
+padding:18px;
+margin:12px 0;
 border-radius:12px;
-box-shadow:0 6px 15px rgba(0,0,0,0.1);
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+font-size:16px;
+}
+
+.price{
+float:right;
+color:#0f8f2f;
+font-weight:bold;
 }
 
 h2{
-color:#0d47a1;
+color:#0f3c91;
+text-align:center;
 }
 
-.service-box{
-background:#e3f2fd;
-padding:15px;
+input,select{
+width:100%;
+padding:12px;
 margin:10px 0;
 border-radius:8px;
+border:1px solid #ccc;
+font-size:15px;
 }
 
 button{
-background:#0d47a1;
+background:#25D366;
 color:white;
-padding:10px 20px;
+padding:14px;
 border:none;
-border-radius:6px;
+border-radius:8px;
+width:100%;
+font-size:17px;
 cursor:pointer;
-margin:5px;
+box-shadow:0 4px 8px rgba(0,0,0,0.2);
 }
 
 button:hover{
-background:#1565c0;
-}
-
-.form-group{
-margin-bottom:15px;
-}
-
-input, select{
-width:100%;
-padding:8px;
-margin-top:5px;
+background:#1ebd5a;
 }
 
 footer{
-background:#0d47a1;
+background:#0f3c91;
 color:white;
 text-align:center;
-padding:15px;
-margin-top:20px;
+padding:18px;
+margin-top:40px;
 }
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:12px 18px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-}
 </style>
 </head>
 
@@ -103,73 +111,77 @@ font-weight:bold;
 <h1>Sudheer Sharma</h1>
 <p>CSC Online Services Center</p>
 <p>📞 6388261030 | 9235184684</p>
+
+<img src="1000260036.png" alt="Sudheer Sharma">
+
 </header>
 
 <nav>
-<a href="#services">Services</a>
+<a href="#services">Services & Price</a>
 <a href="#apply">Apply Online</a>
-<a href="#contact">Contact</a>
 </nav>
 
-<section id="services">
-<h2>Our Services</h2>
+<div class="section" id="services">
+<h2>Services & Price List</h2>
 
-<div class="service-box">✔ PAN Card Apply & Correction</div>
-<div class="service-box">✔ Aadhaar Mobile Update</div>
-<div class="service-box">✔ Income Certificate</div>
-<div class="service-box">✔ Caste Certificate</div>
-<div class="service-box">✔ Niwas Praman Patra</div>
-<div class="service-box">✔ All Government Online Forms</div>
+<div class="card">Birth Certificate <span class="price">₹300</span></div>
+<div class="card">Aay Praman Patra <span class="price">₹80</span></div>
+<div class="card">Domicile Certificate <span class="price">₹80</span></div>
+<div class="card">Caste Certificate <span class="price">₹80</span></div>
+<div class="card">PAN Card Apply <span class="price">₹110</span></div>
+<div class="card">Labour Card <span class="price">₹200</span></div>
+<div class="card">Ayushman Card <span class="price">₹100</span></div>
+<div class="card">Aadhaar Update</div>
+<div class="card">Voter ID Card</div>
+<div class="card">Ration Card</div>
+<div class="card">All Government Schemes</div>
 
-</section>
-
-<section id="apply">
-<h2>Apply Online Form</h2>
-
-<div class="form-group">
-<label>Name:</label>
-<input type="text" placeholder="Enter your name">
 </div>
 
-<div class="form-group">
-<label>Mobile Number:</label>
-<input type="number" placeholder="Enter mobile number">
-</div>
+<div class="section" id="apply">
+<h2>Apply Online</h2>
 
-<div class="form-group">
-<label>Select Service:</label>
-<select>
-<option>PAN Card</option>
-<option>Aadhaar Update</option>
-<option>Income Certificate</option>
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="mobile" placeholder="Mobile Number">
+
+<select id="service">
+<option>Select Service</option>
+<option>Birth Certificate</option>
+<option>Aay Praman Patra</option>
+<option>Domicile Certificate</option>
 <option>Caste Certificate</option>
-<option>Niwas Certificate</option>
+<option>PAN Card</option>
+<option>Labour Card</option>
+<option>Ayushman Card</option>
+<option>Aadhaar Update</option>
+<option>Voter ID Card</option>
+<option>Ration Card</option>
+<option>Other Government Scheme</option>
 </select>
+
+<button onclick="sendWhatsApp()">Submit on WhatsApp</button>
+
 </div>
-
-<button onclick="alert('Application Submitted! We will contact you soon.')">
-Submit
-</button>
-
-</section>
-
-<section id="contact">
-<h2>Contact Us</h2>
-<button onclick="window.location.href='tel:6388261030'">
-Call 6388261030
-</button>
-<button onclick="window.location.href='tel:9235184684'">
-Call 9235184684
-</button>
-</section>
 
 <footer>
-© 2026 Sudheer Sharma | CSC Online Services
+© 2026 Sudheer Sharma CSC Online Services | All Rights Reserved
 </footer>
 
-<a class="whatsapp" href="https://wa.me/916388261030" target="_blank">
-WhatsApp
-</a>
+<script>
+function sendWhatsApp() {
+var name = document.getElementById("name").value;
+var mobile = document.getElementById("mobile").value;
+var service = document.getElementById("service").value;
+
+var url = "https://wa.me/916388261030?text="
++ "New CSC Application%0a"
++ "Name: " + name + "%0a"
++ "Mobile: " + mobile + "%0a"
++ "Service: " + service;
+
+window.open(url, '_blank');
+}
+</script>
 
 </body>
 </html>
